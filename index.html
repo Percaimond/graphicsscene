@@ -18,22 +18,76 @@
 
 			const geometry = new THREE.BoxGeometry();
 			const material = new THREE.MeshBasicMaterial( { color: 0x00abc0 } );
-			const cube = new THREE.Mesh( geometry, material );
+			const material2 = new THREE.MeshBasicMaterial({color: 0x4b0082});
+			
+			const cube = new THREE.Mesh( geometry, material2 );
+			const cube2 = new THREE.Mesh( geometry, material );
+			const cube3 = new THREE.Mesh( geometry, material2 );
+			const cube4 = new THREE.Mesh( geometry, material );
+			const cube5 = new THREE.Mesh( geometry, material2 );
+			const cube6 = new THREE.Mesh( geometry, material );
+			const cube7 = new THREE.Mesh( geometry, material );
+			const cube8 = new THREE.Mesh( geometry, material2);
 			scene.add( cube );
+			scene.add(cube2);
+			scene.add(cube3);
+			scene.add(cube4);
+			scene.add(cube5);
+			scene.add(cube6);
+			scene.add(cube7);
+			scene.add(cube8);
 
 			camera.position.z = 5;
 
 			const animate = function () {
 				requestAnimationFrame( animate );
 
+				cube7.position.x = -6
+				cube5.position.x = -4
+				cube4.position.x = -2
+				cube.position.x = 0
+				cube2.position.x = 2
+				cube3.position.x = 4
+				cube6.position.x = 6
+				cube8.position.x = 8
+				
+
+				cube2.rotation.x += 0.01;
+				cube2.rotation.y += 0.01;
+				cube2.rotation.z += 0.01;
+
+				cube3.rotation.x += 0.01;
+				cube3.rotation.y += 0.01;
+				cube3.rotation.z += 0.01;
+
+				cube4.rotation.x += 0.01;
+				cube4.rotation.y += 0.01;
+				cube4.rotation.z += 0.01;
+
+				cube5.rotation.x += 0.01;
+				cube5.rotation.y += 0.01;
+				cube5.rotation.z += 0.01;
+
+				cube6.rotation.x += 0.01;
+				cube6.rotation.y += 0.01;
+				cube6.rotation.z += 0.01;
+
+				cube7.rotation.x += 0.01;
+				cube7.rotation.y += 0.01;
+				cube7.rotation.z += 0.01;
+
+				cube8.rotation.x += 0.01;
+				cube8.rotation.y += 0.01;
+				cube8.rotation.z += 0.01;
+
 				cube.rotation.x += 0.01;
 				cube.rotation.y += 0.01;
 				cube.rotation.z += 0.01;
 
 
-				camera.rotation.x += 0.01;
-				camera.rotation.y += 0.01;
-				camera.rotation.z += 0.01;
+				//camera.rotation.x += 0.01;
+				//camera.rotation.y += 0.01;
+				//camera.rotation.z += 0.01;
 
 				renderer.render( scene, camera );
 			};
