@@ -1,0 +1,192 @@
+</div>
+<!doctype html>
+
+<html lang="en">
+   <style>
+@font-face {
+    font-family: "RobotoMono";
+    src: url("RobotoMono-Bold.ttf");
+}
+
+body{
+   padding: 1rem;
+    font-family: RobotoMono;
+}
+
+
+#header{
+    text-align: center;outline : 1px solid black;
+}
+#primary {
+    float: left;
+    width: 25%;  height: 80%;
+    outline : 1px solid black;
+    text-align: center;
+}
+
+#content {
+    
+    width: 50%; height:80%;
+    text-align: center;
+    outline : 1px solid black;
+    display: inline-block;
+    margin: 0 auto;
+    background-color:pink;
+}
+
+#secondary {
+    float: right;
+    width: 25%;  height: 80%;
+    text-align: center;
+    margin: 0 auto;
+    outline : 1px solid black;
+    
+    
+}
+
+footer {
+  
+    text-align: center; outline : 1px solid black;
+}
+* { box-sizing: border-box;}
+
+html {
+  font-size: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;  
+}
+
+p {
+  margin: .5rem 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* First the Grid */
+.pixel-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* The Picture Frame */
+.pixel-frame {
+  padding: .5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  
+  background-color: white;
+  color: black;
+}
+
+/* The Images */
+.pixel-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.pixel-image:hover {
+  opacity: .7;
+}
+   </style> 
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+
+  <title>Pixelarium</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <p>Pixelarium</p>
+  </div>
+    
+  <div id="primary">
+    <p>Checkout</p>
+      <div class="box">
+      </div>
+  </div>
+    
+  <div id="content">
+    <p>Articles</p>
+        <div class="pixel-grid">
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/circles.png"
+              <figcaption>1</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/diamond.png"
+              <figcaption>2</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/gumba.png"
+              <figcaption>3</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/heart.png"
+              <figcaption>4</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/ruby.png"
+              <figcaption>5</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/liluzi.png"
+              <figcaption>6</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/link.png"
+              <figcaption>7</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/logo.png"
+              <figcaption>8</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/mario.png"
+              <figcaption>9</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/marios.png"
+              <figcaption>10</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/megaman.png"
+              <figcaption>11</figcaption>
+          </figure>
+          <figure class="pixel-frame">
+            <img class="pixel-image" src="img/sonic.png"
+              <figcaption>12</figcaption>
+          </figure>
+        </div>
+      </div>
+    
+  <div id="secondary">
+    <p>View</p>
+  </div>
+    
+  <footer>
+    <p>Footer</p>
+  </footer>
+</div>
+</body>
+</html>
