@@ -297,13 +297,16 @@ $('.pixel-image').click(function()
           for(let i=0;i<data.length;i++) {
             //$('.box3').append("<tr><td>"+"ola");
             //$('.picID').append("<tr><td>"+"img/diamond.png");
+            //$.picDia = ('<img src="img/diamond.png" style="width": "100px"; "height": "100px"; />');
 
-            $('.picID').append('<img src="img/diamond.png" alt="something" />').css('width', '50px').css('height', '50px');
-            $('.id').append("</td><td>"+data[i].id);
-            $('.name').append("</td><td>"+data[i].name);
-            $('.creationDate').append("</td></tr>"+data[i].creationDate);
-            $('.story').append("</td></tr>"+data[i].story);
-            $('.price').append("</td></tr>"+data[i].price);
+            //pic.height(100).width(100);
+            //pic.css({"width": "100px","height": "100px"});
+            $('.picID').append('<img src="img/diamond.png" style="width: 150px;height: 150px;" />');
+            $('.id').append("</td> <td>"+data[i].id);
+            $('.name').append("</td> <td>"+data[i].name);
+            $('.creationDate').append("</td> </tr>"+data[i].creationDate);
+            $('.story').append("</td> </tr>"+data[i].story);
+            $('.price').append("</td> </tr>"+data[i].price);
             }
           }
         },
