@@ -167,7 +167,7 @@ p {
 }
    </style> 
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
@@ -205,51 +205,51 @@ p {
     <p>Articles</p>
         <div class="pixel-grid">
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/circles.png" onclick="display()"
+            <img class="pixel-image" src="img/circles.png"> <!--onclick="display()"-->
               <figcaption>1</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/diamond.png"
+            <img class="pixel-image" src="img/diamond.png">
               <figcaption>2</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/gumba.png"
+            <img class="pixel-image" src="img/gumba.png">
               <figcaption>3</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/heart.png"
+            <img class="pixel-image" src="img/heart.png">
               <figcaption>4</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/ruby.png"
+            <img class="pixel-image" src="img/ruby.png">
               <figcaption>5</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/liluzi.png"
+            <img class="pixel-image" src="img/liluzi.png">
               <figcaption>6</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/link.png"
+            <img class="pixel-image" src="img/link.png">
               <figcaption>7</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/logo.png"
+            <img class="pixel-image" src="img/logo.png">
               <figcaption>8</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/mario.png"
+            <img class="pixel-image" src="img/mario.png">
               <figcaption>9</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/marios.png"
+            <img class="pixel-image" src="img/marios.png">
               <figcaption>10</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/megaman.png"
+            <img class="pixel-image" src="img/megaman.png">
               <figcaption>11</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/sonic.png"
+            <img class="pixel-image" src="img/sonic.png">
               <figcaption>12</figcaption>
           </figure>
         </div>
@@ -258,6 +258,12 @@ p {
   <div id="secondary">
     <p>View</p>   <div class="box3">
       view article
+      <div class="picID">picID</div>
+      <div class="id">id</div>
+      <div class="name">name</div>
+      <div class="creationDate">creationDate</div>
+      <div class="story">story</div>
+      <div class="price">price</div>
       </div>
   </div>
     
@@ -279,6 +285,35 @@ function display(){
   afterview.appendChild(this.img2)
   preview.appendChild(this.img);
 }
+
+$('.pixel-image').click(function()
+  {
+    $.ajax({
+      type: 'GET',
+      url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/ruby.json',
+      dataType:"json",
+      success: function(data) { 
+        if(data) {
+          for(let i=0;i<data.length;i++) {
+            //$('.box3').append("<tr><td>"+"ola");
+            //$('.picID').append("<tr><td>"+"img/diamond.png");
+
+            $('.picID').append('<img src="img/diamond.png" alt="something" />').css('width', '50px').css('height', '50px');
+            $('.id').append("</td><td>"+data[i].id);
+            $('.name').append("</td><td>"+data[i].name);
+            $('.creationDate').append("</td></tr>"+data[i].creationDate);
+            $('.story').append("</td></tr>"+data[i].story);
+            $('.price').append("</td></tr>"+data[i].price);
+            }
+          }
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+          alert('error: ' + textStatus + ': ' + errorThrown);
+        }
+    });
+    console.log("ok");
+    return false;
+});
 </script>
 </body>
 </html>
