@@ -114,6 +114,7 @@ p {
   margin-right: 10%;
   margin-left: 10%;
   height: 50%;
+  position:relative
 }
 .box3{
   text-align: center;
@@ -142,15 +143,27 @@ p {
 .buy{
   float:right;
   background-color: blue;
-  margin-right: 10%; 
-  width: 20%;
+  bottom: 0;
+  width: 30%;
+  position: absolute;
+  text-align:
 }
 .completesum{
+  margin-left:30%;
+  margin-right:30%;
   float:left;
-  margin-left: 10%;
+  display: flex;
+  //display:inline-block;
   background-color: red;
-  text-align:center;  
-  width: 60%;
+  //text-align: right; 
+  text-align: center; 
+  vertical-align: middle;
+  justify-content: center;
+  align-items: right;
+  bottom: 0;
+  width: 70%;
+  position: absolute;
+
 }
    </style> 
 <head>
@@ -178,9 +191,10 @@ p {
     <p>Checkout</p>
       <div class="box">
       shopping cart
-      </div>
       <div class="completesum">Complete sum</div>
       <div class="buy">Buy</div>
+      </div>
+
       <div class="box2">
         Donation
       </div>
