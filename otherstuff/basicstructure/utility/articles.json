@@ -1,0 +1,93 @@
+{
+ "articles":
+    [
+        {
+            "picID":"diamond.png",
+            "id":"00",
+            "name":"diamond",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"20฿"
+        },
+        {
+            "picID":"ruby.png",
+            "id":"01",
+            "name":"ruby",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"circles.png",
+            "id":"02",
+            "name":"circles",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"sonic.png",
+            "id":"03",
+            "name":"sonic",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"mario.png",
+            "id":"04",
+            "name":"mario",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"marios.png",
+            "id":"05",
+            "name":"marios",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"megaman.png",
+            "id":"06",
+            "name":"megaman",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"logo.png",
+            "id":"07",
+            "name":"logo",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"intials.png",
+            "id":"08",
+            "name":"intials",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"heart.png",
+            "id":"09",
+            "name":"heart",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"link.png",
+            "id":"10",
+            "name":"link",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        }
+    ]
+}
