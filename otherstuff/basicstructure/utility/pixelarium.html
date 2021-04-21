@@ -116,7 +116,7 @@ p {
   height: 50%;
   position:relative
 }
-.box3{
+#box3{
   text-align: center;
   outline : 1px solid black;
   background-color: pink;  
@@ -142,11 +142,13 @@ p {
 }
 .buy{
   float:right;
-  background-color: blue;
+  background-color: white;
   bottom: 0;
   width: 30%;
   position: absolute;
   text-align:
+  //border-top: 1px solid;
+  //border-right : 1px solid;
 }
 .completesum{
   margin-left:30%;
@@ -154,7 +156,7 @@ p {
   float:left;
   display: flex;
   //display:inline-block;
-  background-color: red;
+  background-color: white;
   //text-align: right; 
   text-align: center; 
   vertical-align: middle;
@@ -163,8 +165,18 @@ p {
   bottom: 0;
   width: 70%;
   position: absolute;
-
+  //border-top: 1px solid;
+  //border-left: 1px solid;
 }
+.hidden{
+  visibility:hidden;
+}
+.picID{outline : 1px solid black;}
+.id{outline : 1px solid black;}
+.name{outline : 1px solid black;}
+.creationDate{outline : 1px solid black;}
+.story{outline : 1px solid black;}
+.price{outline : 1px solid black;}
    </style> 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -205,65 +217,65 @@ p {
     <p>Articles</p>
         <div class="pixel-grid">
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/circles.png"> <!--onclick="display()"-->
+            <img class="pixel-image" id="circles"src="img/circles.png"> <!--onclick="display()"-->
               <figcaption>1</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/diamond.png">
+            <img class="pixel-image" id="diamond" src="img/diamond.png">
               <figcaption>2</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/gumba.png">
+            <img class="pixel-image" id="gumba" src="img/gumba.png">
               <figcaption>3</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/heart.png">
+            <img class="pixel-image" id="heart" src="img/heart.png">
               <figcaption>4</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/ruby.png">
+            <img class="pixel-image" id="ruby" src="img/ruby.png">
               <figcaption>5</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/liluzi.png">
+            <img class="pixel-image" id="liluzi" src="img/liluzi.png">
               <figcaption>6</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/link.png">
+            <img class="pixel-image" id="link" src="img/link.png">
               <figcaption>7</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/logo.png">
+            <img class="pixel-image" id="logo" src="img/logo.png">
               <figcaption>8</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/mario.png">
+            <img class="pixel-image" id="mario" src="img/mario.png">
               <figcaption>9</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/marios.png">
+            <img class="pixel-image" id="marios" src="img/marios.png">
               <figcaption>10</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/megaman.png">
+            <img class="pixel-image" id="megaman" src="img/megaman.png">
               <figcaption>11</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" src="img/sonic.png">
+            <img class="pixel-image" id="sonic" src="img/sonic.png">
               <figcaption>12</figcaption>
           </figure>
         </div>
       </div>
     
   <div id="secondary">
-    <p>View</p>   <div class="box3">
+    <p>View</p>   <div id="box3">
       view article
-      <div class="picID">picID</div>
-      <div class="id">id</div>
-      <div class="name">name</div>
-      <div class="creationDate">creationDate</div>
-      <div class="story">story</div>
-      <div class="price">price</div>
+      <div class="picPIC"></div>
+      <div class="picID"></div>
+      <div class="picNAME"></div>
+      <div class="creationDate"></div>
+      <div class="story"></div>
+      <div class="price"></div>
       </div>
   </div>
     
@@ -288,6 +300,7 @@ function display(){
 
 $('.pixel-image').hover(function()
   {
+    $('#box3').removeClass('hidden');
     $.ajax({
       type: 'GET',
       url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/ruby.json',
@@ -295,18 +308,12 @@ $('.pixel-image').hover(function()
       success: function(data) { 
         if(data) {
           for(let i=0;i<data.length;i++) {
-            //$('.box3').append("<tr><td>"+"ola");
-            //$('.picID').append("<tr><td>"+"img/diamond.png");
-            //$.picDia = ('<img src="img/diamond.png" style="width": "100px"; "height": "100px"; />');
-
-            //pic.height(100).width(100);
-            //pic.css({"width": "100px","height": "100px"});
-            $('.picID').append('<img src="img/diamond.png" style="width: 150px;height: 150px;" />');
-            $('.id').append("</td> <td>"+data[i].id);
-            $('.name').append("</td> <td>"+data[i].name);
-            $('.creationDate').append("</td> </tr>"+data[i].creationDate);
-            $('.story').append("</td> </tr>"+data[i].story);
-            $('.price').append("</td> </tr>"+data[i].price);
+            $('.picPIC').append('picture: <img src="img/diamond.png" style="width: 150px;height: 150px;justif-content: center;" />');
+            $('.picID').append("</td>picID: <td>"+data[i].id);
+            $('.picNAME').append("</td>picName: <td>"+data[i].name);
+            $('.creationDate').append("</td>date of creation: </tr>"+data[i].creationDate);
+            $('.story').append("</td>story of creation: </tr>"+data[i].story);
+            $('.price').append("</td>price:  </tr>"+data[i].price);
             }
           }
         },
@@ -314,9 +321,19 @@ $('.pixel-image').hover(function()
           alert('error: ' + textStatus + ': ' + errorThrown);
         }
     });
-    console.log("ok");
     return false;
-});
+},
+        function(){
+      //$('#box3').addClass('hidden');
+      $('.picPIC').empty();
+      $('.picID').empty();
+      $('.picNAME').empty();
+      $('.creationDate').empty();
+      $('.story').empty();
+      $('.price').empty();
+
+    }
+);
 </script>
 </body>
 </html>
