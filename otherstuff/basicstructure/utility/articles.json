@@ -66,9 +66,9 @@
             "price":"5฿"
         },
         {
-            "picID":"intials.png",
+            "picID":"liluzi.png",
             "id":"08",
-            "name":"intials",
+            "name":"liluzi",
             "creationDate":"13.03.2021",
             "story":"created during the coronavirus pandemic",
             "price":"5฿"
@@ -85,6 +85,14 @@
             "picID":"link.png",
             "id":"10",
             "name":"link",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"gumba.png",
+            "id":"11",
+            "name":"gumba",
             "creationDate":"13.03.2021",
             "story":"created during the coronavirus pandemic",
             "price":"5฿"
