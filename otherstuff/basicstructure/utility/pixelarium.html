@@ -58,8 +58,6 @@ footer {
     
 }
 
-
-
 html {
   font-size: 100%;
 }
@@ -237,51 +235,51 @@ p {
     <p>Articles</p>
         <div class="pixel-grid">
           <figure class="pixel-frame">
-            <img class="pixel-image" id="circles"src="img/circles.png"> <!--onclick="display()"-->
+            <img class="pixel-image" id="02"src="img/circles.png"> <!--onclick="display()"-->
               <figcaption>1</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="diamond" src="img/diamond.png">
+            <img class="pixel-image" id="00" src="img/diamond.png">
               <figcaption>2</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="gumba" src="img/gumba.png">
+            <img class="pixel-image" id="11" src="img/gumba.png">
               <figcaption>3</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="heart" src="img/heart.png">
+            <img class="pixel-image" id="09" src="img/heart.png">
               <figcaption>4</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="ruby" src="img/ruby.png">
+            <img class="pixel-image" id="01" src="img/ruby.png">
               <figcaption>5</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="liluzi" src="img/liluzi.png">
+            <img class="pixel-image" id="08" src="img/liluzi.png">
               <figcaption>6</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="link" src="img/link.png">
+            <img class="pixel-image" id="10" src="img/link.png">
               <figcaption>7</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="logo" src="img/logo.png">
+            <img class="pixel-image" id="07" src="img/logo.png">
               <figcaption>8</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="mario" src="img/mario.png">
+            <img class="pixel-image" id="04" src="img/mario.png">
               <figcaption>9</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="marios" src="img/marios.png">
+            <img class="pixel-image" id="05" src="img/marios.png">
               <figcaption>10</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="megaman" src="img/megaman.png">
+            <img class="pixel-image" id="06" src="img/megaman.png">
               <figcaption>11</figcaption>
           </figure>
           <figure class="pixel-frame">
-            <img class="pixel-image" id="sonic" src="img/sonic.png">
+            <img class="pixel-image" id="03" src="img/sonic.png">
               <figcaption>12</figcaption>
           </figure>
         </div>
@@ -322,30 +320,33 @@ $('.pixel-image').hover(function()
   {
     //alert(this.id);
     var displayID = this.id;
+    var displayINT = parseInt(displayID);
     //$pic = $('.pixel-image').attr('id');
     $('#box3').removeClass('hidden');
     $.ajax({
       type: 'GET',
-      url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/ruby.json',
-     // url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/articles.json',
+      //url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/ruby.json',
+      url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/articles.json',
       dataType:"json",
       success: function(data) { 
+        //var dataParsed = data;
+        //alert(data.status);
         if(data) {
-          for(let i=0;i<data.length;i++) {
+          //alert(data.articles[1].name);
+          //alert(data.articles.length);
+          //for(let i=0;i<data.articles.length;i++) {
             var imgSource = document.createElement('img');
-            imgSource.src = 'img/' + displayID + '.png';
+            imgSource.src = 'img/' + data.articles[displayINT].picID;
             imgSource.style.width = "250px";
             $('.picPIC').append(imgSource);
-            //$('.picPIC').append('picture: <img src="imgSource"  style="width: 150px;height: 150px;justif-content: center;" />');
-            //$('.picPIC').append('picture: <img src="img/sonic.png" style="width: 150px;height: 150px;justif-content: center;" />');
-            $('.picID').append("</td> pictureID: </tr>"+data[i].id);
-            $('.picNAME').append("</td> name of the picture: </tr>"+data[i].name);
-            $('.creationDate').append("</td>date of creation: </tr>"+data[i].creationDate);
-            $('.story').append("</td>creation story: </tr>"+data[i].story);
-            $('.price').append("</td>price:  </tr>"+data[i].price);
-            console.log(displayID);
+            $('.picID').append("</td> pictureID: </tr>"+ data.articles[displayINT].id);
+            $('.picNAME').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
+            $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
+            $('.story').append("</td>creation story: </tr>"+ data.articles[displayINT].story);
+            $('.price').append("</td>price:  </tr>"+ data.articles[displayINT].price);
+            console.log(data.articles[displayINT].id);
             console.log(imgSource);
-            }
+            //}
           }
         },
         error: function(jqXHR, textStatus, errorThrown){
