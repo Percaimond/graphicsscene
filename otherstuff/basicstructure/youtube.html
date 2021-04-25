@@ -136,7 +136,7 @@ img{
           //videoId: 'jEXiKww25vo',
           events: {
             'onReady': onPlayerReady,
-            //'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange
           }
         });
         
@@ -149,6 +149,8 @@ img{
 
       function onPlayerReady(event){
         event.target.loadPlaylist({list: "PLgF1b0EI941Y7dAItuRkYAQx3nRM3lNF8", index:31, startSeconds:10});
+        //player.start();
+        //ytp-next-button ytp-button
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -166,6 +168,14 @@ img{
       }
       //player.loadVideoById(videoId:String,
         //             startSeconds:Number):Void
+
+      function searchVideoByRapper(){
+        var results = YouTube.Search.list('id,snippet', {q:'insert rapper naem here, maxResults:25'});
+        for(var i in results.items){
+          var item = results.items[i];
+          //Logger.log('[')
+        }
+      }
     </script>
   </body>
 
