@@ -1,56 +1,56 @@
 @font-face {
-    font-family: "RobotoMono";
-    src: url("RobotoMono-Bold.ttf");
+  font-family: "RobotoMono";
+  src: url("RobotoMono-Bold.ttf");
 }
 
 body{
-   padding: 1rem;
-    font-family: RobotoMono;
-    min-width: 500px;
-    min-height: 500px;
+  padding: 1rem;
+  font-family: RobotoMono;
+  min-width: 500px;
+  min-height: 500px;
 }
 
 
 #header{
-    text-align: center;outline : 1px solid black;
+  text-align: center;outline : 1px solid black;
 }
 footer {
-    background: black;
-    text-align: center;
-    color: white;
-    outline : 1px solid white;
+  background: black;
+  text-align: center;
+  color: white;
+  outline : 1px solid white;
 }
 #primary {
-    float: left;
-    width: 25%;
-    height: 80%;
-    outline : 1px solid black;
-    text-align: center;overflow:hidden;
-    position: relative;
+  float: left;
+  width: 25%;
+  height: 80%;
+  outline : 1px solid black;
+  text-align: center;overflow:hidden;
+  position: relative;
 }
 
 #content {
-    width: 50%; height:80%;
-    text-align: center;
-    outline : 1px solid black;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    margin-bottom: -1px;
-    display: inline-block;
-    margin: 0 auto;
-    background-color:pink;min-block-size: 150px;
-    overflow-y:scroll;
+  width: 50%; height:80%;
+  text-align: center;
+  outline : 1px solid black;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-bottom: -1px;
+  display: inline-block;
+  margin: 0 auto;
+  background-color:pink;min-block-size: 150px;
+  overflow-y:scroll;
 }
 
 #secondary {
-    float: right;
-    width: 25%;  height: 80%;
-    text-align: center;
-    margin: 0 auto;
-    outline : 1px solid black;overflow:hidden;
-      transition: width 2s;
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-    
+  float: right;
+  width: 25%;  height: 80%;
+  text-align: center;
+  margin: 0 auto;
+  outline : 1px solid black;
+  overflow:hidden;
+  transition: width 2s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); 
 }
 
 html {
@@ -163,4 +163,7 @@ p {
 }
 .hidden{
   visibility:hidden;
+}
+.paymethod{
+  outline : 1px solid black;
 }
