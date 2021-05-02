@@ -12,6 +12,23 @@ function display(){
     preview.appendChild(this.img);
 }
 
+function openSite(evt, siteName){
+  switch(siteName){
+    case 'Startsite': window.location.href='index.html';
+      break;
+    case 'Github': window.location.href='https://github.com/Percaimond';
+      break;
+    case 'Utility': window.location.href='utility.html';
+      break;
+    case 'YourSongs': window.location.href='music.html';
+      break;
+    case 'Premium': window.location.href='premium.html';
+      break;
+    case 'Shop': window.location.href='personalshop.html';
+      break;
+  }
+}
+
 $('.pixel-image').hover(function()
     {
       var displayID = this.id;
