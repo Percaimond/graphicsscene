@@ -12,8 +12,14 @@ body{
 
 
 #header{
-  text-align: center;outline : 1px solid black;
+  text-align: center;
+  outline : 1px solid black;
 }
+#navigation{
+  text-align: center;
+  outline : 1px solid black;
+}
+
 footer {
   background: black;
   text-align: center;
@@ -183,7 +189,11 @@ p {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  color:white;
+  color:white; 
+  align-content:center;
+  text-align:center;
+  float: none;
+  bottom:0%;
 }
 
 /* Change background color of buttons on hover */
@@ -204,4 +214,5 @@ p {
   border: 1px solid black;
   border-top: none;
   align-content:center;
+  
 }
