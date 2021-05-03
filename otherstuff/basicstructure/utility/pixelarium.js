@@ -26,6 +26,14 @@ function openSite(evt, siteName){
       break;
     case 'Shop': window.location.href='personalshop.html';
       break;
+    case 'Calculator': window.location.href='calculator.html';
+      break;
+    case 'ShoppingList': window.location.href='shoppingList.html';
+      break;
+    case 'Game': window.location.href='game.html';
+      break;
+    case 'Search': window.location.href='search.html';
+      break;
   }
 }
 
