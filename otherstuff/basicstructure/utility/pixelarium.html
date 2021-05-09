@@ -132,8 +132,68 @@
   </footer>
 </div>
 <script>
-$('.pixel-image').hover(function()
+$('.pixel-image').mouseover(function()
     {
+        $('#picPIC').empty();
+        $('.picID').empty();
+        $('.picNAME').empty();
+        $('.creationDate').empty();
+        $('.story').empty();
+        $('.price').empty();
+        $picName = null;
+      var displayID = this.id;
+      var displayINT = parseInt(displayID);
+      $('#box3').removeClass('hidden');
+      $.ajax({
+        type: 'GET',
+        url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/articles.json',
+        dataType:"json",
+        success: function(data) { 
+          if(data) {
+              var imgSource = document.createElement('img');
+              imgSource.src = 'img/' + data.articles[displayINT].picID;
+              imgSource.style.width = "250px";
+              $('#picPIC').append(imgSource);
+              $('.picID').append("</td> pictureID: </tr>"+ data.articles[displayINT].id);
+              $('.picNAME').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
+              $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
+              $('.story').append("</td>creation story: </tr>"+ data.articles[displayINT].story);
+              $('.price').append("</td>price:  </tr>"+ data.articles[displayINT].price);
+              console.log(data.articles[displayINT].id);
+              console.log(imgSource);
+              
+            }
+          },
+          error: function(jqXHR, textStatus, errorThrown){
+            alert('error: ' + textStatus + ': ' + errorThrown);
+          }
+      });
+      return false;
+  }/*,function(){
+        $('#picPIC').empty();
+        $('.picID').empty();
+        $('.picNAME').empty();
+        $('.creationDate').empty();
+        $('.story').empty();
+        $('.price').empty();
+        $picName = null;
+    }*/
+);
+
+
+
+
+
+
+
+/*$('.pixel-image').click(function(){
+  $('#picPIC').empty();
+  $('.picID').empty();
+  $('.picNAME').empty();
+  $('.creationDate').empty();
+  $('.story').empty();
+  $('.price').empty();
+  $picName = null;
       var displayID = this.id;
       var displayINT = parseInt(displayID);
       $('#box3').removeClass('hidden');
@@ -161,19 +221,7 @@ $('.pixel-image').hover(function()
           }
       });
       return false;
-  },function(){
-        $('#picPIC').empty();
-        $('.picID').empty();
-        $('.picNAME').empty();
-        $('.creationDate').empty();
-        $('.story').empty();
-        $('.price').empty();
-        $picName = null;
-    }
-);
-$('.pixel-image').click(function(){
-
-});
+});*/
 
 </script>
 </body>
