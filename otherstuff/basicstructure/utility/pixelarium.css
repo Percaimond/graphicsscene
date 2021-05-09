@@ -159,6 +159,8 @@ p {
   width: 30%;
   position: absolute;
   /*text-align:*/
+  box-shadow:  1px 0px 0px 0px black,
+  0px -1px 0px 0px black;
 }
 .completesum{
   margin-left:30%;
@@ -175,12 +177,22 @@ p {
   bottom: 0;
   width: 70%;
   position: absolute;
+  outline : 1px solid black;
 }
 .hidden{
   visibility:hidden;
 }
-.paymethod{
-  outline : 1px solid black;
+#paypal{
+  box-shadow:  1px 0px 0px 0px black,
+  0px -1px 0px 0px black;
+}
+#crypto{
+  box-shadow:  1px 0px 0px 0px black,
+  0px -1px 0px 0px black;
+}
+#bank{
+  box-shadow:  1px 0px 0px 1px black,
+  0px -1px 0px 0px black;
 }
 .tab {
   overflow: hidden;
