@@ -117,7 +117,16 @@ p {
   margin-left: 10%;
   height: 50%;
   position:relative
+  
 }
+.viewcontainer{
+  text-align: left;
+
+}
+#picPic{
+  text-align: center;
+}
+
 #box3{
   text-align: center;
   outline : 1px solid black;

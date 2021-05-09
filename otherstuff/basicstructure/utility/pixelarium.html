@@ -98,15 +98,18 @@
       </div>
     
   <div id="secondary">
-    <p>View</p>   <div id="box3">
+    <p>View</p>   
+    <div id="box3">
       view article
-      <div class="picPIC"></div>
-      <div class="picID"></div>
-      <div class="picNAME"></div>
-      <div class="creationDate"></div>
-      <div class="story"></div>
-      <div class="price"></div>
+      <div class="viewcontainer">
+        <div id="picPIC"></div>
+        <div class="picID"></div>
+        <div class="picNAME"></div>
+        <div class="creationDate"></div>
+        <div class="story"></div>
+        <div class="price"></div>
       </div>
+    </div>
   </div>
   <div id="navigation">
       <p>Navigation</p>
@@ -143,7 +146,7 @@ $('.pixel-image').hover(function()
               var imgSource = document.createElement('img');
               imgSource.src = 'img/' + data.articles[displayINT].picID;
               imgSource.style.width = "250px";
-              $('.picPIC').append(imgSource);
+              $('#picPIC').append(imgSource);
               $('.picID').append("</td> pictureID: </tr>"+ data.articles[displayINT].id);
               $('.picNAME').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
               $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
@@ -159,7 +162,7 @@ $('.pixel-image').hover(function()
       });
       return false;
   },function(){
-        $('.picPIC').empty();
+        $('#picPIC').empty();
         $('.picID').empty();
         $('.picNAME').empty();
         $('.creationDate').empty();
@@ -168,6 +171,9 @@ $('.pixel-image').hover(function()
         $picName = null;
     }
 );
+$('.pixel-image').click(function(){
+
+});
 
 </script>
 </body>
