@@ -1,3 +1,7 @@
-* [] update style of borders
+* [] add svg items
 * [] add price
-* [] add payment
+* [] implement shopping cart
+* [] implement payment
+* [] update style of content
+* [] add backend
+* [] add import/update functionality of images/articles
