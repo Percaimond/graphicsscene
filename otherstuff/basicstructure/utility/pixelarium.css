@@ -237,3 +237,13 @@ p {
   align-content:center;
   
 }
+
+/*.box2:hover{
+  transition: height 1s ease-in-out;
+  height:100px;
+}*/
+
+.paymethod:hover{
+  transition: height 1s ease-in-out;
+  height:100px;
+}
