@@ -1,3 +1,4 @@
+* [] update style css
 * [] add svg items
 * [] add price
 * [] implement shopping cart
