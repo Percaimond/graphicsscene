@@ -144,6 +144,7 @@ $('.pixel-image').mouseover(function()
         $('.creationDate').empty();
         $('.story').empty();
         $('.price').empty();
+        $('.add').empty();
         $picName = null;
       var displayID = this.id;
       var displayINT = parseInt(displayID);
@@ -163,7 +164,7 @@ $('.pixel-image').mouseover(function()
               $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
               $('.story').append("</td>creation story: </tr>"+ data.articles[displayINT].story);
               $('.price').append("</td>price:  </tr>"+ data.articles[displayINT].price);
-              $('add').append("<button>");//add buy button
+              $('.add').append("<button>Add</button>");//add buy button
               console.log(data.articles[displayINT].id);
               console.log(imgSource);
               $('#secondary').append(img/circles.png);
