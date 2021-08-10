@@ -247,3 +247,14 @@ p {
   transition: height 1s ease-in-out;
   height:75px;
 }
+button{
+  font-family: RobotoMono;
+  height:50px;
+  width:150px;
+  background-color:pink;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  margin-top:22%;
+  margin-bottom:0%
+}
