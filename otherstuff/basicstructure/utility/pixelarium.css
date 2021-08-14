@@ -194,6 +194,7 @@ p {
   box-shadow:  1px 0px 0px 1px black,
   0px -1px 0px 0px black;
 }
+
 .tab {
   overflow: hidden;
   border: 1px solid white;
@@ -247,7 +248,8 @@ p {
   transition: height 1s ease-in-out;
   height:75px;
 }
-button{
+
+.addbutton{
   font-family: RobotoMono;
   height:50px;
   width:150px;
