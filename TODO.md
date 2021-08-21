@@ -5,5 +5,7 @@
 * [] implement payment
 * [] update style of content
 * [] add backend
-* [] add import/update functionality of images/articles
+* [] update picture display (automic increment of numbers)
+* [] add import/update functionality of images/articles + also json file 
+* [] navigation through display like a gallery with arrow elements and numbers
 * [] start youtube page
