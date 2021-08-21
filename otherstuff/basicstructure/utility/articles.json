@@ -96,6 +96,54 @@
             "creationDate":"13.03.2021",
             "story":"created during the coronavirus pandemic",
             "price":"5฿"
+        },
+        {
+            "picID":"monitor.png",
+            "id":"12",
+            "name":"monitor",
+            "creationDate":"21.07.2021",
+            "story":"icon for pb",
+            "price":"5฿"
+        },
+        {
+            "picID":"emerald.png",
+            "id":"13",
+            "name":"emerald",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"sphere.png",
+            "id":"14",
+            "name":"sphere",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"amethyst.png",
+            "id":"15",
+            "name":"amethyst",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"slime.png",
+            "id":"16",
+            "name":"slime",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
+        },
+        {
+            "picID":"violin.png",
+            "id":"17",
+            "name":"violin",
+            "creationDate":"13.03.2021",
+            "story":"created during the coronavirus pandemic",
+            "price":"5฿"
         }
     ]
 }
