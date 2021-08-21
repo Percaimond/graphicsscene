@@ -76,3 +76,4 @@ $('.pixel-image').hover(function()
         $picName = null;
     }
 );
+
