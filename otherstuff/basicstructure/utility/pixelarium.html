@@ -189,7 +189,7 @@ $('.pixel-image').mouseover(function()
               $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
               $('.story').append("</td>creation story: </tr>"+ data.articles[displayINT].story);
               $('.price').append("</td>price:  </tr>"+ data.articles[displayINT].price);
-              $('.add').append('<button class="addbutton">Add</button>');//add buy button
+              $('.add').append('<button class="addbutton" id=imgSource>Add</button>');//add buy button
               console.log(data.articles[displayINT].id);
               console.log(imgSource);
               $('#secondary').append(img/circles.png);
@@ -211,8 +211,8 @@ $('.pixel-image').mouseover(function()
     }*/
 );
 
-$('.add').click(function(){
- $('.box').append('<img class="pixel-image" id="14" src="img/sphere.png">');//on click should add small picture element to shopping cart
+$('.add').click(function(){     
+ $('.box').append('<img class="shoppingimage" src=imgSource>');//on click should add small picture element to shopping cart
 });
 
 

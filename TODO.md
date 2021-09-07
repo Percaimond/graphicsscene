@@ -9,3 +9,4 @@
 * [] add import/update functionality of images/articles + also json file 
 * [] navigation through display like a gallery with arrow elements and numbers
 * [] start youtube page
+* [] status of add button
