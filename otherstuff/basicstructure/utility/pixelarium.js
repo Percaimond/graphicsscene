@@ -12,6 +12,18 @@ function display(){
     preview.appendChild(this.img);
 }
 
+function addToCart(){
+  //
+  var imgSource = document.createElement('img');
+
+  imgSource.src  = picPIC.getElementsByTagName('img')[0].src; 
+  console.log(imgSource.src);
+  imgSource.style.width = "50px";
+  $('.box').append(imgSource);
+  console.log(imgSource);
+
+}
+
 function openSite(evt, siteName){
   switch(siteName){
     case 'Startsite': window.location.href='index.html';

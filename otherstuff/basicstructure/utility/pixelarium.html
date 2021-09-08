@@ -28,7 +28,7 @@
     
   <div id="primary">
     <p>Checkout</p>
-      <div class="box">
+      <div class="box" id="cartBox">
       shopping cart
       <div class="completesum">Complete sum</div>
       <div class="buy">Buy</div>
@@ -189,7 +189,7 @@ $('.pixel-image').mouseover(function()
               $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
               $('.story').append("</td>creation story: </tr>"+ data.articles[displayINT].story);
               $('.price').append("</td>price:  </tr>"+ data.articles[displayINT].price);
-              $('.add').append('<button class="addbutton" id=imgSource>Add</button>');//add buy button
+              $('.add').append('<button class="addbutton" onclick=addToCart()>Add</button>');//add buy button
               console.log(data.articles[displayINT].id);
               console.log(imgSource);
               $('#secondary').append(img/circles.png);
@@ -198,6 +198,7 @@ $('.pixel-image').mouseover(function()
           error: function(jqXHR, textStatus, errorThrown){
             alert('error: ' + textStatus + ': ' + errorThrown);
           }
+          
       });
       return false;
   }/*,function(){
@@ -211,9 +212,6 @@ $('.pixel-image').mouseover(function()
     }*/
 );
 
-$('.add').click(function(){     
- $('.box').append('<img class="shoppingimage" src=imgSource>');//on click should add small picture element to shopping cart
-});
 
 
 
