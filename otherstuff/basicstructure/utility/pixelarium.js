@@ -15,10 +15,10 @@ function display(){
 function addToCart(){
   //
   var imgSource = document.createElement('img');
-
   imgSource.src  = picPIC.getElementsByTagName('img')[0].src; 
   console.log(imgSource.src);
   imgSource.style.width = "50px";
+  //imgSource.style.marginTop = "20%";
   $('.box').append(imgSource);
   console.log(imgSource);
 
