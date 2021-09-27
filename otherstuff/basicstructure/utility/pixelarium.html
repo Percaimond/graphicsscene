@@ -182,17 +182,17 @@ $('.pixel-image').mouseover(function()
           if(data) {
               var imgSource = document.createElement('img');
               imgSource.src = 'img/' + data.articles[displayINT].picID;
-              imgSource.style.width = "250px";
+              imgSource.style.width = "50%";
+              imgSource.style.objectFit = "contain";
               $('#picPIC').append(imgSource);
               $('.picID').append("</td> pictureID: </tr>"+ data.articles[displayINT].id);
               $('.picNAME').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
               $('.creationDate').append("</td>date of creation: </tr>"+ data.articles[displayINT].creationDate);
               $('.story').append("</td>creation story: </tr>"+ data.articles[displayINT].story);
               $('.price').append("</td>price:  </tr>"+ data.articles[displayINT].price);
-              $('.add').append('<button class="addbutton" onclick=addToCart()>Add</button>');//add buy button
+              $('.add').append('<button class="addbutton" >Add</button>');//add buy  buttononclick=addToCart()
               console.log(data.articles[displayINT].id);
               console.log(imgSource);
-              $('#secondary').append(img/circles.png);
             }
           },
           error: function(jqXHR, textStatus, errorThrown){
@@ -210,6 +210,34 @@ $('.pixel-image').mouseover(function()
         $('.price').empty();
         $picName = null;
     }*/
+);
+$('addbutton').click(function()
+    {
+      var displayID = this.id;
+      var displayINT = parseInt(displayID);
+      //$('#box3').removeClass('hidden');
+      $.ajax({
+        type: 'GET',
+        url: 'http://127.0.0.1:5500/otherstuff/basicstructure/utility/articles.json',
+        dataType:"json",
+        success: function(data) { 
+          if(data) {
+            var imgSource = document.createElement('img');
+            imgSource.src  = picPIC.getElementsByTagName('img')[0].src; 
+              imgSource.style.width = "50px";
+              $('.box').append(imgSource);
+              $('.box').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
+              $('.box').append("</td>price:  </tr>"+ data.articles[displayINT].price);
+              console.log(data.articles[displayINT].id);
+              console.log(imgSource);
+            }
+          },
+          error: function(jqXHR, textStatus, errorThrown){
+            alert('error: ' + textStatus + ': ' + errorThrown);
+          }
+      });
+      return false;
+    }
 );
 
 
