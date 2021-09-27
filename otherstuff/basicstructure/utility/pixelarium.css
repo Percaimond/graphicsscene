@@ -116,7 +116,7 @@ p {
   margin-right: 10%;
   margin-left: 10%;
   height: 50%;
-  position:relative
+  position:relative;
   
 }
 .viewcontainer{
@@ -264,4 +264,22 @@ p {
   align-content:center;
   height:100px;
   width:100px;
+}
+.displayedPic{
+  width:20%;
+  height:80%;
+  background-color:#ddd;
+  display:inline-block;
+}
+.displayedName{
+  width:20%;
+  height:80%;
+  background-color:#ddd;
+  display:inline-block;
+}
+.displayedPrice{
+  width:20%;
+  height:80%;
+  background-color:#ddd;
+  display:inline-block;
 }
