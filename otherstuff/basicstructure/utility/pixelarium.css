@@ -270,16 +270,20 @@ p {
   height:80%;
   background-color:#ddd;
   display:inline-block;
+  position: sticky;overflow-y: scroll;
 }
 .displayedName{
-  width:20%;
+  width:45%;
   height:80%;
   background-color:#ddd;
   display:inline-block;
+  position: static;overflow-y: scroll;
 }
 .displayedPrice{
-  width:20%;
+  width:25%;
   height:80%;
   background-color:#ddd;
   display:inline-block;
+  position: sticky;
+  overflow-y: scroll;
 }
