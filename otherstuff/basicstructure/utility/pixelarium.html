@@ -231,11 +231,18 @@ $('.pixel-image').click(function()
               imgSource.style.objectFit = "contain";
               $('.displayedPic').append(imgSource);
               $('.displayedName').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
-            
               $('.displayedPrice').append("</td>price:  </tr>"+ data.articles[displayINT].price);
+              let oldprice = parseInt(data.articles[displayINT].price);
+              let completesum = 0;
+              completesum = parseInt(data.articles[displayINT].price);
+              //completesum += sum;
+
+              console.log(completesum);
+              $('.completesum').empty();
+              $('.completesum').append(completesum + " Bitcoin");
               
-              console.log(data.articles[displayINT].id);
-              console.log(imgSource);
+              
+
             }
           },
           error: function(jqXHR, textStatus, errorThrown){
