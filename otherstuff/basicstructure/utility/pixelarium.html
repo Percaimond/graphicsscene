@@ -214,10 +214,12 @@ $('.pixel-image').mouseover(function()
         $picName = null;
     }*/
 );
+var oldprice = 0;
 $('.pixel-image').click(function()
     {
       var displayID = this.id;
       var displayINT = parseInt(displayID);
+      
       //$('#box3').removeClass('hidden');
       $.ajax({
         type: 'GET',
@@ -232,14 +234,14 @@ $('.pixel-image').click(function()
               $('.displayedPic').append(imgSource);
               $('.displayedName').append("</td> name of the picture: </tr>"+ data.articles[displayINT].name);
               $('.displayedPrice').append("</td>price:  </tr>"+ data.articles[displayINT].price);
-              let oldprice = parseInt(data.articles[displayINT].price);
               let completesum = 0;
-              completesum = parseInt(data.articles[displayINT].price);
+              oldprice = oldprice + parseInt(data.articles[displayINT].price);
+              completesum = parseInt(data.articles[displayINT].price + oldprice);
               //completesum += sum;
 
-              console.log(completesum);
+              console.log(oldprice);
               $('.completesum').empty();
-              $('.completesum').append(completesum + " Bitcoin");
+              $('.completesum').append(oldprice + " Bitcoin");
               
               
 
