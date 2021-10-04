@@ -41,10 +41,10 @@
         <div class="paymethod" id="donation"><input border="0" type="image" src="img/dollar.png" width = "20px">Donation</div>
         <div class="paymethod" id="paypal">
         <form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="PJZANB3XTA6PQ" />
-<input type="image" src="img/paypal.png" width = "20px" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-PayPal<img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
-</form></div>
+        <input type="hidden" name="hosted_button_id" value="PJZANB3XTA6PQ" />
+        <input type="image" src="img/paypal.png" width = "20px" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+        PayPal<img alt="" border="0" width="1" height="1" />
+        </form></div>
         <div class="paymethod" id="crypto"><input border="0" type="image" src="img/crypto.png" width = "20px">Crypto</div>
         <div class="paymethod" id="bank"><input border="0" type="image" src="img/bank.png" width = "20px">Bank</div>
       </div>
@@ -125,9 +125,8 @@ PayPal<img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" 
               <figcaption>18</figcaption>
           </figure>
         </div>
-        
       </div>
-    
+  
   <div id="secondary">
     <p>View</p>   
     <div id="box3">
@@ -146,8 +145,7 @@ PayPal<img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" 
   <div id="navigation">
       <p>Navigation</p>
     </div>  
-  <footer>
-    
+  <footer>   
     <div>
     <div class="tab">
       <button class="tablinks" onclick="openSite(event, 'Startsite')">Startsite</button>
@@ -204,15 +202,6 @@ $('.pixel-image').mouseover(function()//function for displaying the image when h
           
       });
       return false;
-  }/*,function(){
-        $('#picPIC').empty();
-        $('.picID').empty();
-        $('.picNAME').empty();
-        $('.creationDate').empty();
-        $('.story').empty();
-        $('.price').empty();
-        $picName = null;
-    }*/
 );
 var oldprice = 0;
 $('.pixel-image').click(function()//function to add product to cart when left mouse button is clicked
@@ -243,8 +232,6 @@ $('.pixel-image').click(function()//function to add product to cart when left mo
               $('.completesum').empty();
               $('.completesum').append("Complete Price: " + oldprice + "฿");
               
-              
-
             }
           },
           error: function(jqXHR, textStatus, errorThrown){
