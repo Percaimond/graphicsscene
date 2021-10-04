@@ -99,7 +99,7 @@ $('.pixel-image').hover(function()
   $('.box').append(imgPrice);
 
 }*/
-$('addbutton').click(function()
+$('.pixel-image').click(function()
     {
       var displayID2 = this.id;
       var displayINT2 = parseInt(displayID);
