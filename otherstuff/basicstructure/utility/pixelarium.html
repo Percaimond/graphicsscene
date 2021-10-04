@@ -164,7 +164,7 @@ PayPal<img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" 
   </footer>
 </div>
 <script>
-$('.pixel-image').mouseover(function()
+$('.pixel-image').mouseover(function()//function for displaying the image when hovering over with mouse
     {
         $('#picPIC').empty();
         $('.picID').empty();
@@ -215,7 +215,7 @@ $('.pixel-image').mouseover(function()
     }*/
 );
 var oldprice = 0;
-$('.pixel-image').click(function()
+$('.pixel-image').click(function()//function to add product to cart when left mouse button is clicked
     {
       var displayID = this.id;
       var displayINT = parseInt(displayID);
@@ -241,7 +241,7 @@ $('.pixel-image').click(function()
 
               console.log(oldprice);
               $('.completesum').empty();
-              $('.completesum').append("Complete Price: " + oldprice + " Bitcoin");
+              $('.completesum').append("Complete Price: " + oldprice + "฿");
               
               
 
