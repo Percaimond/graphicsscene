@@ -15,7 +15,7 @@ function display(){
 
 function openSite(evt, siteName){
   switch(siteName){
-    case 'Startsite': window.location.href='index.html';
+    case 'Startsite': window.location.href='/otherstuff/basicstructure/start.html';
       break;
     case 'Github': window.location.href='https://github.com/Percaimond';
       break;
