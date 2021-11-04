@@ -24,7 +24,7 @@ body{
 		-webkit-transform: translate3d(0px, 0px, 0px);
 	}
 	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
+		-webkit-transform: translate3d(100px, 0px, 0px);
 	}
 }
 
@@ -33,7 +33,7 @@ body{
 		-webkit-transform: translate3d(0px, 0px, 0px);
 	}
 	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
+		-webkit-transform: translate3d(100px, 0px, 0px);
 	}
 }
 
@@ -42,7 +42,7 @@ body{
 		-webkit-transform: translate3d(0px, 0px, 0px);
 	}
 	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
+		-webkit-transform: translate3d(100px, 0px, 0px);
 	}
 }
 
@@ -66,10 +66,10 @@ body{
 }
 
 .twinkling{
-	width:10000px;
+	width:100px;
 	height: 100%;
 	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-	background-size: 1000px 1000px;
+	background-size: 100px 1000px;
   position: absolute;
   right: 0;
   top: 0;
@@ -108,7 +108,7 @@ img{
   right: 20px;
 }
 label{
-  z-index: 500;
+  z-index: 5;
   position: fixed;
 	top: 0;
 	left:0;
@@ -116,8 +116,15 @@ label{
 	right: 0;
 }
 h1{
-  background-color:white;
-  z-index: 7;
+  text-align: center;
+vertical-align: middle;
+  content-align:center;
+line-height: 90px;  
+  color:white;
+  background-color:red;
+  font-size: 100px;
+  font-weight: 400;
+  z-index: 6;
 }
 </style>
   <body>
@@ -125,18 +132,19 @@ h1{
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
     <div class="stars"></div>
     <div class="twinkling"></div>
-    <div class="clouds"></div>
+    <div class="clouds"><h1>CHOOSE YOUR ARTIST</h1></div>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <h1>CHOOSE YOUR ARTIST</h1>
+    
     <div id="player"> 
+    
     </div> 
    <!--<label for="rappers">Choose a rapper:</label>
       <select name="cars" id="cars">
       <option value="volvo">Future</option>
       <option value="saab">Playboi Carti</option>
       <option value="mercedes">Young Thug</option>
-      <option value="audi">Lil Uzi</option>-->
-    </select>
+      <option value="audi">Lil Uzi</option>
+    </select>-->
    
  
     <script>
