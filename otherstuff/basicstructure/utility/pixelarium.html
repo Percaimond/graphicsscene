@@ -213,22 +213,25 @@ $('.add').click(function()//function to add product to cart when left mouse butt
         dataType:"json",
         success: function(data) { 
           if(data) {
-             /* var imgSource = document.createElement('img');
-              imgSource.src = 'img/' + this.data.articles[displayINT].picPIC;
-              imgSource.style.width = "100%";
-              imgSource.style.objectFit = "contain";*/
-              $('.displayedPic').append(picPIC);//wrong
-              $('.displayedName').append("</td> name of the picture: </tr>"+ picNAME);
-              $('.displayedPrice').append("</td>price:  </tr>"+ price);
+              var imgSource2 = document.createElement('img');//still wrong but closer to goal
+              imgSource2.src = 'img/heart.png';
+              imgSource2.style.width = "50%";
+              imgSource2.style.objectFit = "contain";
+
+              
+              $('.displayedPic').append(imgSource2);//wrong
+
+              $('.displayedName').append("</td> name of the picture: </tr>");
+              $('.displayedPrice').append("</td>price:  </tr>");
               let completesum = 0;
-              oldprice = oldprice + parseInt(this.data.articles[displayINT].price);
-              completesum = parseInt(data.articles[displayINT].price + oldprice);
+              //oldprice = oldprice + parseInt(this.data.articles[displayINT].price);
+              //completesum = parseInt(data.articles[displayINT].price + oldprice);
               //completesum += sum;
 
               console.log(oldprice);
               $('.completesum').empty();
               $('.completesum').append("Complete Price: " + oldprice + "฿");
-              console.log(data.articles[displayINT].id);
+              //console.log(data.articles[displayINT].id);
               console.log("hallo");
             }
           },
